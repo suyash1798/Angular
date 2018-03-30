@@ -13,17 +13,23 @@ import {HttpClient} from '@angular/common/http';
 import {RoutesModule} from './routes/routes.module';
 import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import {AuthService} from './Services/auth.service';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
+  {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent }
+  {path: 'signup', component: SignupComponent },
+  {path: 'confirm', component: ConfirmationComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +37,10 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatCardModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

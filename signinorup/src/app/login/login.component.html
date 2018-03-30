@@ -7,16 +7,18 @@
         formControlName="Username"
 
       >
+      <mat-error *ngIf="!loginForm.get('Username').valid && loginForm.get('Username').touched">Enter the correct username</mat-error>
     </mat-form-field>
-    <span *ngIf="!loginForm.get('Username').valid && loginForm.get('Username').touched"><br>*Enter the correct username</span>
+
     <br>
     <mat-form-field>
       <input
         matInput
         placeholder="Email"
       formControlName="Email">
+      <mat-error *ngIf="!loginForm.get('Email').valid && loginForm.get('Email').touched">*Enter the correct Email</mat-error>
     </mat-form-field>
-    <span *ngIf="!loginForm.get('Email').valid && loginForm.get('Email').touched"><br>*Enter the correct username</span>
+
     <br>
     <mat-form-field>
       <input
@@ -28,11 +30,13 @@
     </mat-form-field>
     <br>
     <button
-      mat-raised-button type="submit"
-    >LOGIN</button>
+      mat-raised-button
+      type="submit"
+      >LOGIN</button>
     <br><br>
     <button
       mat-raised-button routerLink="/signup"
+
     >
       SIGNUP
     </button>
