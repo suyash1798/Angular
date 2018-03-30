@@ -1,0 +1,40 @@
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Username"
+        formControlName="Username"
+
+      >
+    </mat-form-field>
+    <span *ngIf="!loginForm.get('Username').valid && loginForm.get('Username').touched"><br>*Enter the correct username</span>
+    <br>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email"
+      formControlName="Email">
+    </mat-form-field>
+    <span *ngIf="!loginForm.get('Email').valid && loginForm.get('Email').touched"><br>*Enter the correct username</span>
+    <br>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        formControlName="Password"
+        type="password"
+      >
+    </mat-form-field>
+    <br>
+    <button
+      mat-raised-button type="submit"
+    >LOGIN</button>
+    <br><br>
+    <button
+      mat-raised-button routerLink="/signup"
+    >
+      SIGNUP
+    </button>
+  </form>
+</div>
