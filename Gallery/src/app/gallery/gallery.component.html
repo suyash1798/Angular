@@ -1,0 +1,13 @@
+<div class="row">
+  <button class="btn-outline-primary" [class.active]="filterby=='all'" (click)="filterby='all'">All</button>
+  <button class="btn-outline-primary" [class.active]="filterby=='Audi'" (click)="filterby='Audi'">Audi</button>
+  <button class="btn-outline-primary" [class.active]="filterby=='Mercedes'" (click)="filterby='Mercedes'">Mercedes</button>
+  <button class="btn-outline-primary" [class.active]="filterby=='ferrari'" (click)="filterby='ferrari'">Ferrari</button>
+  <ul id="thumbnailsList">
+    <li *ngFor="let image of (images | filter:filterby)">
+      <a [routerLink]="['/image',image.id]">
+      <img src="{{image.url}}" class="image" width="250" height="160">
+      </a>
+    </li>
+  </ul>
+</div>
