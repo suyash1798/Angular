@@ -1,0 +1,12 @@
+form{
+  width: 30%;
+  background: gray;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 40px;
+
+}
+span{
+  font-size: 20px;
+  color: red;
+}
