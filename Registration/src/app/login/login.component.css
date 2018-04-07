@@ -1,0 +1,21 @@
+
+mat-card{
+  hieght: 500px;
+  width: 200px;
+  align-items: center;
+  vertical-align: bottom;
+}
+button{
+
+  margin:5px;
+  padding: 5px;
+  align-items: center;
+  alignment: center;
+  align-self: center;
+}
+a{
+  margin-top: 40px;
+}
+.googlebu{
+  background-color: red;
+}
