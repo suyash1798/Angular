@@ -11,11 +11,11 @@ export class AuthguardService implements CanActivate {
         return true;
       } else {
         console.log('no user');
-        this.router.navigate(['/login']);
+        this.router.navigateByUrl('/login');
         return false;
       }
     });
-    return false;
+    return true;
   }
   constructor(private router: Router, private auth: AuthService){
 

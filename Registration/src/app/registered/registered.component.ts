@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class RegisteredComponent implements OnInit {
 
   fuck = 'fuck';
-  username: string;
+  username = 'suyash';
   constructor(private auth: AuthService, private Actrouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -20,6 +20,7 @@ export class RegisteredComponent implements OnInit {
         this.username = params.get('username');
       }
     );
+
   }
   Logout() {
     this.auth.logout().then(() => {
